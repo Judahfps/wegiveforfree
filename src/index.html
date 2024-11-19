@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="/styles/output.css">
+
+    <title>We Give For Free</title>
+</head>
+<body class="bg-gray-200">
+    
+    <!--Mobile-->
+    
+    <div id="menu" class="hidden absolute z-50 w-full flex-col items-center px-3 py-2 bg-slate-600 shadow-xl">
+        <div class="flex justify-center items-center">
+            
+            <button id="btn-close" onclick="closeMenu()" class="text-3xl text-bold font-bold mt-4 m-auto text-rose-600">X</button>
+        </div>
+        
+        
+        
+        <nav id="close-nav" class="flex flex-col bg-slate-600 h-full w-full items-center py-3 font-medium">
+            <ol class="w-full flex flex-col mt-8 gap-5 text-gray-400">
+                <li>
+                    <a href="/src/index.html" class="hover:text-gray-300 duration-300 text-2xl">Home</a>
+                </li>
+                <li>
+                    <div class="relative inline-block text-left">
+                        <!-- Botão do Dropdown -->
+                        <button id="mobile-button" class="hover:text-gray-300 duration-300 text-2xl">
+                            Cadastro
+                        </button>
+                        
+                        <!-- Menu do Dropdown -->
+                        <div id="mobile-drop" class="hidden w-full origin-top-right absolute right-0 mt-2">
+                            <div class="w-28 h-full bg-slate-600">
+                                <a href="/src/form/instituicao.html" class="block px-4 py-2 text-lg text-gray-400 hover:text-gray-300">Instituição</a>
+                                <a href="/src/form/professor.html" class="block px-4 py-2 text-lg text-gray-400 hover:text-gray-300">Professor</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </li>
+                
+                <li class="">
+                    <a href="#" class="hover:text-gray-300 duration-300 text-2xl">Abrigos</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="hover:text-gray-300 duration-300 text-2xl">Orfanatos</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="hover:text-gray-300 duration-300 text-2xl">Sobre Nós</a>
+                </li>
+            </ol>
+        </nav>
+        
+    </div>
+    
+    <!--Fim Mobile-->
+    
+    <header class="flex bg-slate-800 gap-3 pl-1 md:gap-5 sm:justify-center">
+        <div class="bg-slate-800 py-2 ml-1">
+            <a href="/src/index.html">
+
+                <img src="/src/assets/imagem-1.jpeg"
+                alt="logo" class="w-16 h-16 rounded-full">
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-between sm:w-auto">
+            <h1 class="text-gray-400 font-bold text-2xl md:text-3xl">We Give For Free</h1>
+            <div class="sm:hidden">
+                <a href="#">
+
+                    <button id="btn-open" onclick="openMenu()" class="inlinne-flex flex items-center justify-center mx-4 h-10 w-10 rounded-md border focus:outline-none border-gray-400 text-gray-400">
+    
+                        <svg class="h-6 w-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                          </svg>
+                    </button>
+                </a>
+                
+            </div>
+
+        </div>
+    </header>
+
+    <nav class="hidden sm:flex bg-slate-600 h-16 w-full items-center py-3 font-bold mx-auto">
+        <ol class="w-full flex justify-center gap-4 text-gray-400">
+            <li>
+                <a href="/src/index.html" class="hover:text-gray-300 lg:text-lg">Home</a>
+            </li>
+            <li>
+                <div class="relative inline-block text-left">
+                    <div>
+                      <button type="button" id="drop-down" class="hover:text-gray-300 lg:text-lg"
+                      aria-expanded="true" aria-haspopup="true">Cadastro</button>
+                    </div>
+                    <div id="drop-menu" class="origin-top-right absolute right-0 hidden bg-slate-600">
+                      <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <a href="/src/form/instituicao.html" class="block px-4 py-4 text-lg text-gray-400 font-semibold hover:text-gray-200">Instituição</a>
+                        <a href="/src/form/professor.html" class="block px-4 py-2 text-lg text-gray-400 font-semibold hover:text-gray-200">Professor</a>
+                      </div>
+                    </div>
+                  </div>
+
+            </li>
+
+            <li class="">
+                <a href="#" class="hover:text-gray-300 duration-300 lg:text-lg">Abrigos</a>
+            </li>
+
+            <li>
+                <a href="#" class="hover:text-gray-300 duration-300 lg:text-lg">Orfanatos</a>
+            </li>
+
+            <li>
+                <a href="#" class="hover:text-gray-300 duration-300 lg:text-lg">Sobre Nós</a>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- <main class="h-screen"> -->
+        <!-- <section class="bg-blue-400">
+            <h2 class="text-slate-700 text-2xl font-semibold px-3 py-3">Sobres Nós</h2>
+            <p class="text-sm px-3 py-3 font-medium">
+                Bom, o projeto We Give For, Free nasceu de um projeto de extensão da minha faculdade, onde eu tinha que criar algum projeto para resolver algum problema da sociedade, então tive essa <br>
+                idéia na minha igreja, onde um abrigo leva as crianças para a escola dominical. <br>
+                Então deu um estalo na minha cabeça e a idéia veio criar uma página onde proficinais de TI podem se cadastrar para dar aulas de tecnologia. <br>
+                A idéia primaria é aulas  da área de TI, mas podemos espandir para outras áreas da educação, o intuito da WE Give For Free, e transformar vida desses jovens, <br>
+                dar uma futuro e esperança de uma mundo melhor, de uma vida cheia de razões para se viver,e a educação é o caminho chave para transformarmos o futuro dessse jovens.
+
+            </p>
+
+        </section> -->
+
+        <!--inicio sessão abrigos-->
+
+       <section class="w-full px-3 lg:px-6">
+            <a href="#"><h2 class="font-bold text-3xl mt-10 mb-6">Abrigos</h2></a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <a href="http://www.ocoracaodopai.org/in-cio.html" target="_blank" class="bg-cyan-400 p-3 rounded-lg min-h-[400px] relative flex flex-col hover:shadow-xl duration-300">
+                    <div>
+
+                        <div class="group overflow-hidden rounded-lg">
+                            <div class="absolute z-40 top-5 left-5">
+                                <div class="flex self-start items-center justify-center gap-3 px-3 py-1 rounded-full">
+                                    
+                                </div>
+                            </div>
+
+                            <img src="/src/assets/logo-pai.jpeg" alt="Coração do Pai" class="rounded-lg w-full h-64 object-cover group-hover:scale-110 duration-300">
+                        </div>
+
+                    </div>
+                    <div class="mt-auto">
+                        <div class="mt-2">
+
+                            <span class="font-medium text-sm">O propósito do abrigo  O Coração do Pai  é ser um instrumento através do qual o amor e a preocupação de Deus para as
+                                crianças é expressado,visando especificamente as crianças e famílias em risco social.
+                                O Abrigo  O Coração do Pai  atende crianças de 0 a 18 anos e procura soluções a longo prazo para elas e suas famílias. O Abrigo O Coração do Pai
+                                também ajuda a comunidade, com a entrega de complementos alimentares para as famílias que estão cadastradas na nossa instituição. Nós também
+                                estamos almejando iniciar aulas de reforço para as crianças e alfabetização para os adultos.
+                            </span>
+                        </div>
+                       
+                    </div>
+                </a>
+
+                <a href="https://www.larbatistamanaus.org/sobre" target="_blank" class="bg-amber-300 p-3 rounded-lg min-h-[400px] relative flex flex-col hover:shadow-xl duration-300">
+                    <div>
+
+                        <div class="group overflow-hidden rounded-lg">
+                            <div class="absolute z-40 top-5 left-5">
+                                <div class="flex self-start items-center justify-center gap-3 px-3 py-1 rounded-full">
+                                    
+                                </div>
+                            </div>
+
+                            <img src="/src/assets/lar-batista.webp" alt="Coração do Pai" class="rounded-lg w-full h-64 object-cover group-hover:scale-110 duration-300">
+                        </div>
+
+                    </div>
+                    <div class="mt-auto">
+                        <div class="mt-2">
+
+                            <span class="font-medium text-sm">
+                                O Lar Batista Janell Doyle é uma Organização da Sociedade Civil - OSC, de natureza beneficente, sem fins lucrativos, que atua como Acolhimento Institucional
+                                e Familiar para crianças e adolescentes, como também Serviço de Convivência e Fortalecimento de Vínculos para as famílias da comunidade do Mauazinho e
+                                Abordagem Social que identifica indivíduos em situação de risco pessoal e social em espaços públicos. Filiada a Convenção Batista do Amazonas. Inaugurada
+                                em 12 de Outubro de 1996.
+                            </span>
+                        </div>
+                       
+                    </div>
+                </a>
+
+                <a href="http://www.ocoracaodopai.org/in-cio.html" target="_blank" class="bg-blue-400 p-3 rounded-lg min-h-[400px] relative flex flex-col hover:shadow-xl duration-300">
+                    <div>
+
+                        <div class="group overflow-hidden rounded-lg">
+                            <div class="absolute z-40 top-5 left-5">
+                                <div class="flex self-start items-center justify-center gap-3 px-3 py-1 rounded-full">
+                                    
+                                </div>
+                            </div>
+
+                            <img src="/src/assets/logo-pai.jpeg" alt="Coração do Pai" class="rounded-lg w-full h-64 object-cover group-hover:scale-110 duration-300">
+                        </div>
+
+                    </div>
+                    <div class="mt-auto">
+                        <div class="mt-2">
+
+                            <span class="font-medium text-sm">O propósito do abrigo  O Coração do Pai  é ser um instrumento através do qual o amor e a preocupação de Deus para as
+                                crianças é expressado,visando especificamente as crianças e famílias em risco social.
+                                O Abrigo  O Coração do Pai  atende crianças de 0 a 18 anos e procura soluções a longo prazo para elas e suas famílias. O Abrigo O Coração do Pai
+                                também ajuda a comunidade, com a entrega de complementos alimentares para as famílias que estão cadastradas na nossa instituição. Nós também
+                                estamos almejando iniciar aulas de reforço para as crianças e alfabetização para os adultos.
+                            </span>
+                        </div>
+                       
+                    </div>
+                </a>
+
+               
+       </section>
+       <!--fim sessão abrigos-->
+
+       <!-- inicio sessão dos orfanatos-->
+
+       
+<!--Fim da sessão dos orfantos-->
+
+    <!-- </main> -->
+    <footer class=" w-full bg-slate-950 p-5 mt-10">
+        <div class="w-full grid grid-cols-1 gap-4 p-5 lg:grid-cols-4">
+            <div class="col-span-1">
+                <h3 class="text-white font-bold">Parceiros</h3>
+                <div class="py-3 flex flex-col gap-2">
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">
+                            --
+                        </span>
+                    </a>
+
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">
+                            --
+                        </span>
+                    </a>
+
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">
+                            --
+                        </span>
+                    </a>
+
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">
+                            --
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-white font-bold">Tecnologia</h3>
+                <div class="py-3 flex flex-col gap-2">
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">Python</span>
+                    </a>
+
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">Java</span>
+                    </a>
+
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">JavaScript</span>
+                    </a>
+
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">HTML</span>
+                    </a>
+                  
+                </div>
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-white font-bold">Abrigos</h3>
+                <div class="py-3">
+                    <a href="#">
+                        <span class="text-gray-400 hover:text-gray-300 duration-300 font-semibold text-sm">Coração do Pai</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-white font-bold">Orfanatos</h3>
+                <div class="flex gap-3 py-3">
+                   
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-1 border-slate-800 mb-4">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-2">
+            <div class="flex flex-col gap-y-4">
+                <div  class="col-span-1">
+                    <p class="text-white flex gap-2 items-center text-xs lg:text-sm"><img src="/src/assets/imagem-1.jpeg" alt="logo" class="h-10 w-10 rounded-full">We Give For Free &copy 2024 Todos os direitos reservados</p>
+                </div>
+    
+                <div class="flex flex-col gap-y-1 col-span-1">
+                    <span class="text-white text-xs lg:text-sm">We Give For Free - CNPJ 00.000.000/0001-00</span>
+                    <span class="text-white text-xs lg:text-sm">Rua José Romão, nº 207 Sala 401 Bloco 26</span>
+                    <span class="text-white text-xs lg:text-sm">Manaus, Am- 69085288</span>
+                    
+                </div>
+    
+            </div>
+
+            <div class="">
+                <h3 class="text-white font-bold">Seguir a We Give For Free</h3>
+                <div class="flex gap-5 py-3">
+                    <div class="col-span-1">
+                        <a href="#"><i class="fa fa-facebook rounded-full h-5 w-5 flex items-center justify-center bg-gray-400 hover:bg-gray-300 duration-300"></i></a>
+                    </div>
+
+                    <div class="col-span-1">
+                        <a href="#"><i class="fa fa-instagram rounded-full h-5 w-5 flex items-center justify-center bg-gray-400 hover:bg-gray-300 duration-300"></i></a>
+                    </div>
+
+                    <div class="col-span-1">
+                        <a href="#"><i class="fa fa-twitter rounded-full h-5 w-5 flex items-center justify-center bg-gray-400 hover:bg-gray-300 duration-300"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+<script src="/src/script.js"></script>
+</html>
