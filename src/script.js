@@ -10,9 +10,7 @@ const dropdownMenu1 = document.getElementById('mobile-drop');
 const menuMobile= document.getElementById('menu')
 const menuAbrir = document.getElementById('btn-open');
 const menuFechar = document.getElementById('btn-close')
-// const closeMenu = document.getElementById('close-menu')
-// const closeNav = document.getElementById('close-nav')
-// const containerClose = document.getElementById('container-close')
+
 
 dropdownButton.addEventListener('click', () => {
   // Toggle a classe 'hidden' para mostrar ou esconder o menu
@@ -38,12 +36,6 @@ window.addEventListener('click', (e) => {
 });
 
 
-//scrip menu mobile
-// const menuMobile = document.getElementById("menu");
-// const btnClose = document.getElementById("btn-close");
-// const btnOpen = document.getElementById("btn-open");
-
-
 function openMenu(){
   menuMobile.classList.remove('hidden')
   menuMobile.classList.add('flex')
@@ -58,9 +50,6 @@ menuMobile.classList.add('hidden')
 }
 
 
-// closeMenu.addEventListener('click', () => {
-//     containerClose.classList.toggle('hidden')
-// })
 
 
 
